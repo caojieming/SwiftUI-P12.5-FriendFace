@@ -13,6 +13,7 @@ struct DetailView: View {
     
     var body: some View {
         List {
+            // general user info
             Section {
                 Text("Registered: \(user.formattedDate)")
                 Text("Age: \(user.age)")
@@ -23,12 +24,14 @@ struct DetailView: View {
                 Text("Basic Info")
             }
             
+            // user description/introduction
             Section {
                 Text(user.about)
             } header: {
                 Text("About")
             }
             
+            // user's friends
             Section {
                 ForEach(user.friends) { friend in 
                     Text(friend.name)
