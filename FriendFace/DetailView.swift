@@ -15,6 +15,7 @@ struct DetailView: View {
         List {
             // general user info
             Section {
+                Text("ID: \(user.id)")
                 Text("Registered: \(user.formattedDate)")
                 Text("Age: \(user.age)")
                 Text("Email: \(user.email)")
